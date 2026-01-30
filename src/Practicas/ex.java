@@ -1,5 +1,5 @@
 
-package EX3;
+package Practicas;
   interface Operacio {
 double calcular(double a, double b);
   }

@@ -24,11 +24,11 @@ public class Poº {
 
     }
 
-    public static int demanarNumero() {
-        int valor = demanarNumero();
-        System.out.println("EL numero és: " + valor);
-
-    }
+//    public static int demanarNumero() {
+//        int valor = demanarNumero();
+//        System.out.println("EL numero és: " + valor);
+//
+//    }
 
     
     public static void main(String[] args) {

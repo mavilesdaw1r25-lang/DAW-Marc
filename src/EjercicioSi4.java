@@ -16,6 +16,6 @@ public class EjercicioSi4 {
         System.out.println("Instrodueix el tipus de UVA (A/B): ");
         tipus= teclat.next().charAt(0);
         
-        if tipus 
+      //  if tipus 
     }
 }
