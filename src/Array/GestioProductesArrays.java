@@ -12,7 +12,7 @@ public class GestioProductesArrays {
 
     // Comparadors reutilitzables
     private static final Comparator<Producte> PER_PREU_ASC
-            = Comparator.comparingInt((Producte p) -> p.getPreu());
+            = Comparator.comparingInt(Producte::getPreu);
 
     private static final Comparator<Producte> PER_PREU_DESC
             = Comparator.comparingInt((Producte p) -> p.getPreu()).reversed();
