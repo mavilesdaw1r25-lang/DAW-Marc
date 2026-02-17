@@ -16,7 +16,7 @@ public class Ej3Streams {
         System.out.println("--- NUEVOS SUELDOS (Subida del 10%) ---");
 
         sueldos.stream()
-                .filter(s -> s < 150)
+                .filter(s -> s < 1500)
                 .map(s -> s * 1.10)
                 .forEach(s -> System.out.println("Sueldo ajustado: " + s + "€"));
     }
