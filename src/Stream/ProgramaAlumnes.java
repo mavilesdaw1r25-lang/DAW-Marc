@@ -1,4 +1,3 @@
-
 package Stream;
 
 import java.util.ArrayList;
@@ -12,7 +11,8 @@ import java.util.stream.Collectors;
  * @author albert
  */
 public class ProgramaAlumnes {
-      public static void main(String[] args) {
+
+    public static void main(String[] args) {
         List<Vehicle> vehicles = new ArrayList();
         vehicles.add(new Vehicle("1111AAA", Model.BMW, 10000));
         vehicles.add(new Vehicle("2222BBB", Model.AUDI, 20000));
@@ -21,50 +21,102 @@ public class ProgramaAlumnes {
         vehicles.add(new Vehicle("5555EEE", Model.AUDI, 200000));
         vehicles.add(new Vehicle("6666FFF", Model.OPEL, 300000));
         vehicles.add(new Vehicle("7777GGG", Model.CITROEN, 0));
-      
+
         vehicles
                 .stream()
                 .sorted(Comparator.comparingInt(Vehicle::getQuilometres))
                 .forEach(System.out::println);
-        
-    /*
+
+        /*
          Crea una llista d'enters que tingui el doble dels quilòmetres 
          de cada cotxe i imprimeix el resultat. 
          A continuació crea una altre llista que 
          contingui els quilòmetres i mostra el resultat
-        */
-      
-        /*
-        Crea una llista de Vehicle que només contingui els AUDI i mostra el 
-        resultat
-        */
-      
-//       vehicles
-//               .stream()
-//               .filter(e -> e.getModel() == Model.AUDI))
-//               .forEach(e -> System.out.println(e.getModel()+""));
-       
-        /*
-         Crea una llista amb els vehicles ordenats per quilòmetres
-         Mostra el resultat
-        */
-//      
-//        vehicles
-//                .stream()
-//                .sorted(Comparator.comparingInt(Vehicle::getModel))
-//                ,forEach(System.out::println
-
+         */
+        
+        List<Integer> result = vehicles.stream()
+                .map(v -> v.getQuilometres()*2)
+                .collect(Collectors.toList());
+        System.out.println(result);
+        
+        
+//          Crea una llista de Vehicle que només contingui els AUDI i mostra el 
+////        resultat
+////         */
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+//        List<Integer> result = vehicles.stream()
+//                .map(v -> v.getQuilometres() * 2)
+//                .collect(Collectors.toList());
+//        System.out.println(result);
+//
+//        List<Integer> result2 = vehicles.stream()
+//                .map(Vehicle::getQuilometres)
+//                .collect(Collectors.toList());
+//        System.out.println(result2);
 //        /*
-//        Mostra el model dels cotxes sense repeticio. Has de crear una llista
-//        de models
-//        */
-      
-        
-        
-        /*
-        Crea una llista de 5 vehicles i mostra-la
-        */
-        
-      }
-        
-      }
+//        Crea una llista de Vehicle que només contingui els AUDI i mostra el 
+//        resultat
+//         */
+//
+//        List<Vehicle> result3 = vehicles.stream()
+//                .filter(v -> v.getModel().equals(Model.AUDI))
+//                .collect(Collectors.toList());
+//        System.out.println(result3);
+//
+//        /*
+//         Crea una llista amb els vehicles ordenats per quilòmetres
+//         Mostra el resultat
+//         */
+////       
+//        List<Vehicle> result4 = vehicles.stream()
+//                .sorted(Comparator.comparingInt(Vehicle::getQuilometres))
+//                .collect(Collectors.toList());
+//        System.out.println(result4);
+//
+////        /*
+////        Mostra el model dels cotxes sense repeticio. Has de crear una llista
+////        de models
+////        */
+//        List<Model> result5 = vehicles.stream()
+//                .map(Vehicle::getModel)
+//                .distinct()
+//                .collect(Collectors.toList());
+//        System.out.println(result5);
+//
+//        /*
+//        Crea una llista de 5 vehicles i mostra-la
+//         */
+//        List<Vehicle> result6 = vehicles.stream()
+//                .limit(5)
+//                .collect(Collectors.toList());
+//        System.out.println(result6);
+//
+//        /*
+//        Agrupa els vehicles per model en un Map i mostra el resultat
+//         */
+//        Map<Model, List<Vehicle>> perModel = vehicles.stream()
+//                .collect(Collectors.groupingBy(Vehicle::getModel));
+//        System.out.println("--------------");
+//        System.out.println(perModel);
+
+    }
+
+}
