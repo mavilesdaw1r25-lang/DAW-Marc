@@ -7,7 +7,7 @@ public class Notas {
     public static void main(String[] args) {
         try {
             Scanner teclado = new Scanner(System.in);
-            System.out.print("Dime el archivo a leer (ejemplo: notesReales.txt): ");
+            System.out.print("notesReales.txt ");
             String nombreArchivo = teclado.nextLine();
             
             File archivo = new File(nombreArchivo);
