@@ -1,0 +1,5 @@
+Madrid 12
+València 6
+Barça 4
+Betis 4
+Sevilla 3
